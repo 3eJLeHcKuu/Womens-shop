@@ -1,0 +1,57 @@
+.full-item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000c8;
+  z-index: 9999;
+  overflow: auto;
+  text-align: center;
+}
+
+.full-item>div {
+  width: 250px;
+  position: relative;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 9px;
+}
+
+.btn-window {
+  float: right;
+  margin-bottom: 20px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: transform 500ms ease;
+  background: #ce1a1a;
+}
+
+.btn-window:hover {
+  transform: scale(1.5) translateY(-5px);
+}
+
+main .button-basket,
+.full-item .button-basket {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: #ce1a1a;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 400;
+  transition: transform 500ms ease;
+}
+
+
+main .button-basket:hover,
+.full-item .button-basket:hover {
+  transform: scale(1.5) translateY(-5px);
+}
