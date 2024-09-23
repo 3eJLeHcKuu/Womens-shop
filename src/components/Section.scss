@@ -1,20 +1,42 @@
-.collection {
-  text-transform: uppercase;
-  font-size: 20px;
-  margin-bottom: 80px;
-}
+@import "../App.scss";
 
-.picture{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 80px;
-}
+section {
+  @include mobile {
+    width: 410px;
+  }
+  .collection {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 80px;
 
-.picture img{
-  border-radius: 10px 10px;
-  transition: transform 500ms ease;
-}
+    @include mobile {
+      font-size: 15px;
+    }
+  }
 
-.picture img:hover{
-  transform: scale(1.04);
+  .picture {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    position: relative;
+    img {
+      border-radius: 10px 10px;
+      transition: transform 800ms ease;
+      width: 100%;
+      height: auto;
+      cursor: zoom-in;
+    }
+    .img-container {
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+      &:hover .image {
+        transform: scale(1.8);
+
+        @include mobile {
+          transform: none;
+        }
+      }
+    }
+  }
 }

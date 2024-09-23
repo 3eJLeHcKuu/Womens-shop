@@ -1,53 +1,99 @@
-main {
+@import "../App.scss";
+
+.items {
   margin-bottom: 80px;
   margin-top: 80px;
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: space-between;
 
+  .button-basket {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: #ce1a1a;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 400;
+    transition: transform 500ms ease;
+
+    &:hover {
+      transform: scale(1.5) translateY(-5px);
+    }
+
+    @include mobile {
+      bottom: -0px;
+      width: 25px;
+      height: 25px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @include mobile {
+    justify-content: center;
+  }
 }
 
-main .item {
+.item {
   text-align: center;
-  width: 20%;
-  font-family: 'Source Sans 3', sans-serif;
+  width: 23%;
+  font-family: "Source Sans 3", sans-serif;
   padding-bottom: 20px;
   position: relative;
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 500ms ease;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    @include mobile {
+      height: 50%;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  b {
+    margin-left: 5px;
+    text-align: center;
+    font-size: 19px;
+
+    @include mobile {
+      font-size: 15px;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    text-align: left;
+    margin-top: 15px;
+    color: #1a1919;
+    margin-left: 10px;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
 }
 
-main .item img,
-.full-item img {
-  border-radius: 10px 10px ;
-  transition: transform 500ms ease;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-main .item img:hover,
-.full-item img:hover {
-  transform: scale(1.05);
-}
-
-main b,
-.full-item b {
-  margin-left: 5px;
-  text-align: center;
-  font-size: 19px;
-}
-
-
-main p,
-.full-item p {
-  font-size: 20px;
-  text-align: left;
-  margin-top: 15px;
-  color: #1a1919;
-  margin-left: 10px;
-}
-
-.promotion {
+.promo {
   text-transform: uppercase;
   font-size: 20px;
   margin-bottom: 80px;
+
+  @include mobile {
+    font-size: 15px;
+  }
 }
