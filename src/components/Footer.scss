@@ -21,6 +21,10 @@ footer {
   justify-content: space-between;
   margin-top: 80px;
 
+  @include tablet {
+    width: 700px;
+  }
+
   @include mobile {
     width: 400px;
   }

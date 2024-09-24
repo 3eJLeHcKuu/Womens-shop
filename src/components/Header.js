@@ -39,7 +39,7 @@ export default function Header(props) {
 
   return (
     <header>
-      <div>
+      <div className="hr-nav">
         <span className="logo">Strong life</span>
         <ul className="nav">
           <FaHouse className="profile" />
@@ -61,10 +61,12 @@ export default function Header(props) {
       <div className="box">
         <div className="offer">
           <h1 className="title">Elemental force always trumps intelligence</h1>
-          <p>If you want to change your life, you better start doing it now.</p>
+          <h2 className="slogan ">
+            If you want to change your life, you better start doing it now.
+          </h2>
           <button
             onClick={() => setCallOpen((callOpen = !callOpen))}
-            className="btn"
+            className="offer-btn"
           >
             Order a call
           </button>

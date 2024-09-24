@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Item from "./Item";
-import "./Items.scss"
+import "./Items.scss";
 
 export class Items extends Component {
   render() {
     return (
-      <>
-        <h1 className="promotion">Promotions and offers</h1>
-        <main>
+      <section>
+        <h1 className="promo">Promotions and offers</h1>
+        <div className="items">
           {this.props.items.map((el) => (
             <Item
               onShowItem={this.props.onShowItem}
@@ -16,8 +16,8 @@ export class Items extends Component {
               onAdd={this.props.onAdd}
             />
           ))}
-        </main>
-      </>
+        </div>
+      </section>
     );
   }
 }

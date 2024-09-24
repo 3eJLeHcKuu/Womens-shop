@@ -2,7 +2,9 @@
 
 .hr-nav {
   width: 1100px;
-
+  @include tablet {
+    width: 710px;
+  }
   @include mobile {
     width: 420px;
   }
@@ -26,7 +28,9 @@ ul.nav {
   float: right;
   list-style: none;
   cursor: pointer;
-
+  @include tablet {
+    width: 210px;
+  }
   @include mobile {
     width: 200px;
     margin-right: 10px;
@@ -133,9 +137,13 @@ header {
     justify-content: space-between;
     margin-bottom: 80px;
 
+    @include tablet {
+      width: 710px;
+    }
     @include mobile {
       width: 410px;
     }
+
     .offer {
       width: 500px;
       text-align: center;
@@ -145,6 +153,9 @@ header {
       justify-content: center;
       gap: 50px;
 
+      @include tablet {
+        width: 310px;
+      }
       @include mobile {
         width: 190px;
         gap: 30px;
@@ -157,6 +168,9 @@ header {
 
         @include mobile {
           font-size: 15px;
+        }
+        @include tablet {
+          font-size: 25px;
         }
       }
 
@@ -287,6 +301,10 @@ header {
     height: 500px;
     border-radius: 10px 10px;
 
+    @include tablet {
+      width: 310px;
+      height: 400px;
+    }
     @include mobile {
       width: 200px;
       height: 300px;
